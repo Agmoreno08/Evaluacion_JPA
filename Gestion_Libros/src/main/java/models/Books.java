@@ -2,49 +2,72 @@ package models;
 
 public class Books {
 
-    private Integer Id;
-    private String Autor;
-    private String Titulo;
-    private Integer AnioPublicacion;
-    private Boolean disponible;
+    private Integer id;
+    private String author;
+    private String title;
+    private Integer publicationYear;
+    private Boolean available;
+
+    public Books() {
+    }
+
+    public Books(Integer id, String author, String title, Integer publicationYear, Boolean available) {
+        this.id = id;
+        this.author = author;
+        this.title = title;
+        this.publicationYear = publicationYear;
+        this.available = available;
+    }
 
     public Integer getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Integer id) {
-        Id = id;
+        this.id = id;
     }
 
-    public String getAutor() {
-        return Autor;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setAutor(String autor) {
-        Autor = autor;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
-    public String getTitulo() {
-        return Titulo;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitulo(String titulo) {
-        Titulo = titulo;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public Integer getAnioPublicacion() {
-        return AnioPublicacion;
-    }
-    public void setAnioPublicacion(Integer anioPublicacion) {
-        AnioPublicacion = anioPublicacion;
+    public Integer getPublicationYear() {
+        return publicationYear;
     }
 
-    public Boolean getDisponible() {
-        return disponible;
+    public void setPublicationYear(Integer publicationYear) {
+        this.publicationYear = publicationYear;
     }
 
-    public void setDisponible(Boolean disponible) {
-        this.disponible = disponible;
+    public Boolean getAvailable() {
+        return available;
+    }
+
+    public void setAvailable(Boolean available) {
+        this.available = available;
+    }
+
+    @Override
+    public String toString() {
+        return "Books{" +
+                "id=" + id +
+                ", author='" + author + '\'' +
+                ", title='" + title + '\'' +
+                ", publicationYear=" + publicationYear +
+                ", available=" + available +
+                '}';
     }
 }
 
